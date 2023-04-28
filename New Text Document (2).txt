@@ -1,0 +1,80 @@
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+
+class ResultPage extends StatefulWidget {
+  final String text;
+
+  ResultPage({required this.text});
+
+  @override
+  _ResultPageState createState() => _ResultPageState();
+}
+
+class _ResultPageState extends State<ResultPage> {
+  String _originalText = '';
+  String _modifiedText = '';
+
+  @override
+  void initState() {
+    super.initState();
+    _originalText = widget.text;
+    _addHelloToText();
+  }
+
+  Future<void> _addHelloToText() async {
+    // Make a POST request to the API endpoint with the extracted text
+    http.Response response = await http.post(
+      Uri.parse('http://localhost:5000/add_hello'),
+      headers: {'Content-Type': 'application/json'},
+      body: {'text': widget.text},
+    );
+
+    // Extract the modified text from the response and update the state
+    setState(() {
+      _modifiedText = response.body['result'];
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Result Page'),
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Text(
+              'Original Text:',
+              style: TextStyle(
+                fontSize: 18.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(widget.text),
+          ),
+          SizedBox(height: 16.0),
+          Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Text(
+              'Modified Text:',
+              style: TextStyle(
+                fontSize: 18.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(_modifiedText),
+          ),
+        ],
+      ),
+    );
+  }
+}

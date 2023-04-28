@@ -1,0 +1,28 @@
+import re
+from statistics import StatisticsError, mean, median, mode
+
+def calculate(user_input):
+    user_input = user_input.lower()
+    if '+' in user_input or '-' in user_input or '*' in user_input or '/' in user_input:
+        try:
+            result = eval(user_input)
+            print(f"The result of the expression is: {result}")
+        except:
+            print("Invalid input")
+            return
+    else:
+        keywords = re.findall(r'\b(mean|mode|median|hcf|gcd|gcf|lcm)\b', user_input)
+        numbers = [int(num) for num in re.findall(r'\d+', user_input)]
+        if not keywords and not numbers:
+            print("Invalid input")
+            return
+        operations = {'mean': mean, 'mode': mode, 'median': median, 'hcf': find_gcf, 'gcd': find_gcf, 'gcf': find_gcf, 'lcm': find_lcm}
+        for keyword in keywords:
+            if keyword in operations:
+                result = operations[keyword](numbers)
+                print(f"{keyword} of the given numbers is: {result}")
+            else:
+                print(f"Invalid keyword: {keyword}")
+
+# Example usage
+calculate("what is the mode, mean of given numbers 7,7,5,5")
