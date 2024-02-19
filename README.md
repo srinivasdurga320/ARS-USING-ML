@@ -6,5 +6,7 @@ Description of your major project goes here.
 
 You can find a demo of our project below:
 
-![Project Demo](https://github.com/srinivasdurga320/ARS-USING-ML/raw/main/Project.webm)
-
+<video width="560" height="315" controls>
+  <source src="https://github.com/srinivasdurga320/ARS-USING-ML/raw/main/Project.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
