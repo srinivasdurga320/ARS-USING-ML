@@ -62,6 +62,3 @@ To use the Flask backend:
 
 Contributions to the Flask backend are appreciated! Whether you'd like to enhance existing functionalities, optimize performance, or add new features, you're encouraged to submit pull requests or open issues on GitHub to contribute to the project's development.
 
-## License
-
-This project is licensed under the MIT License, allowing for free use, modification, and distribution of the codebase. Refer to the [LICENSE](LICENSE) file for more details.
