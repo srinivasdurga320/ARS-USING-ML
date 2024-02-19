@@ -1,6 +1,6 @@
 # Major Project
 
-Description of your major project goes here. 
+Description of your major project goes here.
 
 ## Demo
 
@@ -19,33 +19,64 @@ You can find a demo of our project below:
 
 This Python tool provides a versatile solution for performing mathematical and statistical operations on both numerical and textual inputs. It is designed to handle a wide range of user queries, from evaluating mathematical expressions to computing statistical measures.
 
-## Features
+### Features
 
-- **Mathematical Expressions**: Easily evaluate mathematical expressions, including basic arithmetic operations and more complex expressions.
-- **Statistical Calculations**: Compute statistical measures such as mean, median, mode, greatest common divisor (gcd), and least common multiple (lcm) of a list of numbers.
-- **Textual Input Handling**: Process textual input by identifying keywords and performing corresponding mathematical or statistical operations.
-- **Natural Language Processing**: Utilizes NLTK (Natural Language Toolkit) for tokenization and part-of-speech tagging to analyze textual input.
+- Easily evaluate mathematical expressions
+- Compute statistical measures (mean, median, mode, etc.)
+- Process textual input for mathematical operations
+- Utilize NLTK for natural language processing
 
-## Usage
+### Usage
 
 1. **Evaluation of Mathematical Expressions**:
-   - Input: Mathematical expressions can be provided in various formats, including standard mathematical notation and text-based expressions.
-   - Output: The tool evaluates the expression and returns the result.
+   - Input: Mathematical expressions in various formats
+   - Output: Evaluated result of the expression
 
 2. **Statistical Operations**:
-   - Input: Lists of numbers or textual descriptions containing numbers and keywords (e.g., "find mean of these numbers").
-   - Output: Returns the calculated statistical measures, such as mean, median, mode, gcd, or lcm.
+   - Input: Lists of numbers or textual descriptions
+   - Output: Calculated statistical measures
 
 3. **Error Handling**:
-   - The tool provides robust error handling for invalid inputs, ensuring smooth operation even in challenging scenarios.
+   - Robust error handling for invalid inputs
 
-## Examples
+### Examples
 
 - Evaluating Mathematical Expression: `calculate('2 * (3 + 4)')`
 - Calculating Mean: `calculate('find mean of 1, 2, 3, 4, 5')`
 - Finding Mode: `calculate('mode of 1, 2, 2, 3, 4, 4, 4, 5')`
-- Processing Textual Input: `calculate('What is the median of these numbers: 5, 10, 15, 20, 25')`
 
-## Contributing
+### Contributing
 
-Contributions are welcome! Feel free to submit bug reports, feature requests, or pull requests to enhance the functionality of the tool.
+Contributions are welcome! Submit bug reports, feature requests, or pull requests to enhance the functionality of the tool.
+
+# ARS Lens - Flutter Text Recognition App
+
+ARS Lens is a Flutter application that utilizes Google ML Kit for text recognition. Users can select an image from the gallery or the camera and perform text recognition on the image.
+
+### Features
+
+- Choose images from gallery or camera
+- Perform text recognition using Google ML Kit
+- Real-time feedback during text recognition
+- Clean and intuitive user interface
+
+### Getting Started
+
+1. Clone the repository to your local machine.
+2. Open the project in a Flutter-compatible IDE.
+3. Build and run the project on your device.
+
+### Usage
+
+1. Launch the ARS Lens app on your device.
+2. Choose an image from the gallery or the camera.
+3. Text recognition will be performed automatically.
+4. Recognized text will be displayed in real-time.
+
+### Contributing
+
+Contributions to the ARS Lens app are welcome! Submit pull requests or open issues on GitHub for improvements or feature requests.
+
+
+
+
